@@ -1,0 +1,37 @@
+.container p {
+  font-size: 50px;
+}
+
+.container span {
+  color: #ff6ceb;
+  font-size: 60px;
+}
+
+.container {
+  color: #ffe8ff;
+}
+
+body {
+  background: #040136;
+  background: -webkit-linear-gradient(bottom, #040130, #030120);
+  background: -o-linear-gradient(bottom, #040130, #030120);
+  background: -moz-linear-gradient(bottom, #040130, #030120);
+  background: linear-gradient(bottom, #040130, #030120);
+  text-align: center;
+  font-family: "Gamja Flower", cursive;
+  font-family: "Nanum Myeongjo", serif;
+}
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.how-btn {
+  padding: 0px 20px;
+  background-color: #222222;
+  border-radius: 25px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
