@@ -1,10 +1,10 @@
 .container p {
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .container span {
   color: #ff6ceb;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .container {
@@ -24,14 +24,4 @@ body {
 .container {
   text-align: center;
   margin-top: 20px;
-}
-
-.how-btn {
-  padding: 0px 20px;
-  background-color: #222222;
-  border-radius: 25px;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
 }
