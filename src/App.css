@@ -8,11 +8,39 @@
 }
 
 .container {
+  padding-top: 30px;
   color: #ffe8ff;
+}
+.winnerMainDiv {
+  display: flex;
+  justify-content: center;
+}
+.winnerDiv {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  display: inline-block;
+}
+.vs {
+  align-self: center;
+  margin: 30px;
+}
+h1 {
+  vertical-align: middle;
+}
+.mainDiv {
+  margin: 0 auto;
+  width: 700px;
+  height: 1000px;
+  background: #040136;
+}
+.mainResultDiv {
+  padding-top: 30px;
 }
 
 body {
-  background: #040136;
   background: -webkit-linear-gradient(bottom, #040130, #030120);
   background: -o-linear-gradient(bottom, #040130, #030120);
   background: -moz-linear-gradient(bottom, #040130, #030120);
@@ -20,8 +48,114 @@ body {
   text-align: center;
   font-family: "Gamja Flower", cursive;
   font-family: "Nanum Myeongjo", serif;
+  color: white;
 }
-.container {
-  text-align: center;
+
+/* photo.css */
+
+.photoDiv {
+  width: 300px;
+  height: 350px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  margin: 0 auto;
+}
+.noPhotoDiv {
+  width: 300px;
+  height: 350px;
+  border-style: none;
+
+  margin: 0 auto;
+}
+.fileUploadBtn {
+  margin-top: 250px;
+  justify-content: center;
+}
+.nonPhotoFram {
+  display: none;
+}
+.photoFram {
+  width: 90%;
+  height: 50%;
+  min-width: 200px;
+  min-height: 300px;
+}
+
+.nonFileBtn {
+  display: none;
+}
+
+.fileBtn {
+  justify-content: center;
+}
+
+.how-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fb2e57;
+  background: -webkit-linear-gradient(top, #f65342, #fb3282);
+  background: -o-linear-gradient(top, #f65342, #fb3282);
+  background: -moz-linear-gradient(top, #f65342, #fb3282);
+  background: linear-gradient(top, #f65342, #fb3282);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.how-btn:hover {
+  background-color: transparent;
+}
+
+.how-btn:hover:before {
+  opacity: 1;
+}
+
+.btnDiv {
   margin-top: 20px;
 }
+
+.how-btn {
+  padding: 0px 20px;
+  background-color: #222222;
+  border-radius: 25px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.noBtn {
+  display: none;
+}
+button {
+  display: inline-block;
+
+  height: 61px;
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.8em 1em;
+  border: 3px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(black, 0.2);
+
+  transform: translate3d(0, 0, 0);
+}
+
+/* result.css */
+
+h3 {
+  margin-top: 80px;
+}
+
+/* winer.css */
