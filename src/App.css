@@ -16,7 +16,7 @@
 }
 
 .container {
-  padding-top: 30px;
+  padding-top: 20%;
   color: #ffe8ff;
 }
 .winnerMainDiv {
@@ -47,23 +47,26 @@
 }
 .blank {
   align-self: center;
-  margin: 53px;
+  margin: 40px;
 }
 h1 {
   vertical-align: middle;
 }
 .mainDiv {
   margin: 0 auto;
-  width: 45%;
+  width: 50%;
   min-width: 450px;
-  min-height: 1000px;
+  min-height: 1500px;
   height: 100%;
   background: #73c6d9;
 }
 .mainResultDiv {
-  padding-top: 30px;
+  padding-top: 20%;
 }
 
+.resultScoreDiv {
+  margin-top: 5%;
+}
 body {
   background: -webkit-linear-gradient(bottom, #040130, #030120);
   background: -o-linear-gradient(bottom, #040130, #030120);
@@ -85,16 +88,19 @@ body {
 .photoDiv {
   width: 45%;
   height: 65%;
-  min-width: 200px;
-  min-height: 300px;
+  min-width: 250px;
+  min-height: 250px;
   border-style: solid;
   border-width: 1px;
   border-color: white;
   margin: 0 auto;
+  margin-top: 5%;
 }
 .noPhotoDiv {
-  width: 300px;
-  height: 350px;
+  width: 45%;
+  height: 65%;
+  min-width: 250px;
+  min-height: 250px;
   border-style: none;
 
   margin: 0 auto;
@@ -107,10 +113,10 @@ body {
   display: none;
 }
 .photoFram {
-  width: 90%;
-  height: 50%;
-  min-width: 200px;
-  min-height: 300px;
+  width: 45%;
+  height: 65%;
+  min-width: 250px;
+  min-height: 250px;
 }
 
 .nonFileBtn {
@@ -151,7 +157,7 @@ body {
 }
 
 .btnDiv {
-  margin-top: 50px;
+  margin-top: 10%;
 }
 
 .how-btn {
@@ -182,11 +188,3 @@ button {
 
   transform: translate3d(0, 0, 0);
 }
-
-/* result.css */
-
-h3 {
-  margin-top: 80px;
-}
-
-/* winer.css */
