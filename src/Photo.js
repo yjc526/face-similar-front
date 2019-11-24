@@ -12,7 +12,7 @@ export default function Photo({
   setSpinner,
   spinner
 }) {
-  const serverURL = "http://localhost:3000/api/upload";
+  const serverURL = "http://localhost:3000/api/post";
 
   const checkFile = f => {
     if (f) {
@@ -76,7 +76,6 @@ export default function Photo({
         <Spinner />
       ) : (
         <>
-          {" "}
           <div className="container">
             <p>
               <img src="케릭터3.png" width="100px" height="70px" />

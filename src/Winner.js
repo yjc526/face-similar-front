@@ -27,12 +27,12 @@ export default function Winner({
           </div>
           <div className="winnerMainDiv">
             <div className="winnerBlankDiv">
-              <h2>점수:{maleScore}</h2>
+              <h3>점수:{maleScore}</h3>
             </div>
             <div className="blank"> </div>
 
             <div className="winnerBlankDiv">
-              <h2>점수:{femaleScore}</h2>
+              <h3>점수:{femaleScore}</h3>
             </div>
           </div>
           <div>

@@ -14,7 +14,10 @@ export default function Result({ result, photo, photoURL, winner, setWinner }) {
         <>
           <div>
             <div className="mainResultDiv">
-              <h1>♡결과를 알려줄거에요♡</h1>
+              <h2>
+                <span class="lnr lnr-heart"></span>결과를 알려줄거에요
+                <span class="lnr lnr-heart"></span>
+              </h2>
             </div>
 
             <div className="noPhotoDiv">
@@ -24,10 +27,11 @@ export default function Result({ result, photo, photoURL, winner, setWinner }) {
               />
             </div>
             <div>
-              <h1>점수:{score}</h1>
+              <h2>점수:{score}</h2>
+              <h3> 우리 커플은 100명 중 1 등</h3>
             </div>
             <div className="btnDiv">
-              <h3>잠깐! 누가더 아까운지 궁금하면 클릭</h3>
+              <h5>잠깐! 누가더 아까운지 궁금하면 클릭</h5>
 
               <button
                 type="button"
