@@ -20,10 +20,7 @@
   color: #ffe8ff;
 }
 .winnerMainDiv {
-<<<<<<< HEAD
   margin-top: 30px;
-=======
->>>>>>> 3c803c6576287836ff2a146ee0d1105462c6150e
   display: flex;
   justify-content: center;
 }
@@ -35,39 +32,28 @@
   border-color: white;
   display: inline-block;
 }
-<<<<<<< HEAD
 .winnerBlankDiv {
   width: 200px;
 
   border-style: none;
   display: inline-block;
 }
-=======
->>>>>>> 3c803c6576287836ff2a146ee0d1105462c6150e
 .vs {
   align-self: center;
   margin: 30px;
 }
-<<<<<<< HEAD
 .blank {
   align-self: center;
   margin: 53px;
 }
-=======
->>>>>>> 3c803c6576287836ff2a146ee0d1105462c6150e
 h1 {
   vertical-align: middle;
 }
 .mainDiv {
   margin: 0 auto;
   width: 700px;
-<<<<<<< HEAD
   height: 1080px;
   background: #8125d6;
-=======
-  height: 1000px;
-  background: #040136;
->>>>>>> 3c803c6576287836ff2a146ee0d1105462c6150e
 }
 .mainResultDiv {
   padding-top: 30px;
@@ -79,7 +65,6 @@ body {
   background: -moz-linear-gradient(bottom, #040130, #030120);
   background: linear-gradient(bottom, #040130, #030120);
   text-align: center;
-<<<<<<< HEAD
   font-family: "BMYEONSUNG";
   letter-spacing: 5px;
 
@@ -97,18 +82,6 @@ body {
   height: 65%;
   min-width: 200px;
   min-height: 300px;
-=======
-  font-family: "Gamja Flower", cursive;
-  font-family: "Nanum Myeongjo", serif;
-  color: white;
-}
-
-/* photo.css */
-
-.photoDiv {
-  width: 300px;
-  height: 350px;
->>>>>>> 3c803c6576287836ff2a146ee0d1105462c6150e
   border-style: solid;
   border-width: 1px;
   border-color: white;
