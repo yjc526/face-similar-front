@@ -3,7 +3,7 @@ import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; //yarn add @fortawesome/fontawesome-free
 import Spinner from "./Spinner";
 
-export default function Result({ result, photo, photoURL, winner, setWinner }) {
+export default function Result({ result, photo, photoURL, setWinner }) {
   console.log("dddddddddddddddddd", result);
   const score = result.score.similar;
   const volume = result.rank.max;
@@ -28,7 +28,7 @@ export default function Result({ result, photo, photoURL, winner, setWinner }) {
             <div className="resultScoreDiv">
               <h2>점수:{score}</h2>
               <h3>
-                우리 커플은 <span>{volume}</span>커플 중 <span>{rank} </span>등
+                우리 커플은 <span>{volume}</span>커플 중 <span>{rank}</span>등
               </h3>
             </div>
 

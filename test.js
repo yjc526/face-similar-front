@@ -32,9 +32,7 @@ export default function Winner({
                   <img
                     src={malePhoto}
                     className="winnerPhotoFram"
-                    onClick={() => {
-                      setDetail("male");
-                    }}
+                    onClick={() => setDetail("male")}
                   />
                 </div>
                 <div className="vs">
@@ -45,9 +43,7 @@ export default function Winner({
                   <img
                     src={femalePhoto}
                     className="winnerPhotoFram"
-                    onClick={() => {
-                      setDetail("female");
-                    }}
+                    onClick={() => setDetail("female")}
                   />
                 </div>
               </div>
@@ -101,26 +97,14 @@ export default function Winner({
               </div>
               <div className="winnerMainDiv">
                 <div className="winnerDiv">
-                  <img
-                    src={malePhoto}
-                    className="winnerPhotoFram"
-                    onClick={() => {
-                      setDetail("male");
-                    }}
-                  />
+                  <img src={malePhoto} className="winnerPhotoFram" />
                 </div>
                 <div className="vs">
                   <h1>VS</h1>
                 </div>
 
                 <div className="winnerDiv">
-                  <img
-                    src={femalePhoto}
-                    className="winnerPhotoFram"
-                    onClick={() => {
-                      setDetail("female");
-                    }}
-                  />
+                  <img src={femalePhoto} className="winnerPhotoFram" />
                 </div>
               </div>
               <div className="winnerServeBlankDiv">
@@ -133,14 +117,8 @@ export default function Winner({
                   <h3>점수:{femaleScore}</h3>
                 </div>
               </div>
-              <div>
-                {detail === "male" ? (
-                  <Male result={result} />
-                ) : (
-                  <Female result={result} />
-                )}
-              </div>
-
+              <div>{detail === "male" ?  <Male  />}</div>
+           
               <div>
                 <h1>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h1>
               </div>
