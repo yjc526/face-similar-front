@@ -94,6 +94,11 @@ export default function Photo({
             <h4>커플 사진을 업로드 해 주세요</h4>
           </div>
           <div className="photoDiv">
+            <div className={photo ? "nonDescriptDiv" : "descriptDiv"}>
+              <p>1.사진은 꼭 커플 사진으로 올려죠요</p>
+              <p>2.크기는 10MB 이하만 가능합니다</p>
+              <p>3. 얼굴이 잘리지 않고 잘 나온 사진으로 올려죠요</p>
+            </div>
             <img
               className={!photo ? "nonPhotoFram" : "photoFram"}
               src={`${photoURL}`}

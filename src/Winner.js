@@ -4,6 +4,7 @@ import Male from "./Male";
 import Female from "./Female";
 import CountUp from "react-countup";
 import Confetti from "react-confetti";
+import Typical from "react-typical";
 
 export default function Winner({
   setResult,
@@ -52,7 +53,11 @@ export default function Winner({
           <div className="winnerBlankDiv">
             <h3>
               점수:
-              <CountUp start={0} end={maleScore} decimals={2} />
+              {detail ? (
+                maleScore
+              ) : (
+                <CountUp start={0} end={maleScore} decimals={2} />
+              )}
             </h3>
           </div>
           <div className="blank"> </div>
@@ -60,7 +65,11 @@ export default function Winner({
           <div className="winnerBlankDiv">
             <h3>
               점수:
-              <CountUp start={0} end={femaleScore} decimals={2} />
+              {detail ? (
+                femaleScore
+              ) : (
+                <CountUp start={0} end={femaleScore} decimals={2} />
+              )}
             </h3>
           </div>
         </div>
@@ -68,11 +77,19 @@ export default function Winner({
     );
   };
 
+  const winner = () => {
+    if (maleScore > femaleScore) {
+      return "MAN";
+    } else {
+      return "WOMAN";
+    }
+  };
+
   const footer = () => {
     return (
       <>
-        <div>
-          <h2>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h2>
+        <div className="WinnerWhoDiv">
+          <Typical steps={[2000, `Winner is ${winner()}`]} wrapper="h2" />
         </div>
         <div>
           <button

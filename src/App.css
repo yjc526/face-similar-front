@@ -132,6 +132,17 @@ body {
   min-width: 250px;
   min-height: 250px;
 }
+.descriptDiv {
+  width: 45%;
+  height: 65%;
+  max-width: 90%;
+  max-height: 90%;
+  min-width: 250px;
+  min-height: 250px;
+}
+.nonDescriptDiv {
+  display: none;
+}
 
 .fileUploadBtn {
   margin-top: 250px;
@@ -205,4 +216,8 @@ button {
   min-width: 100%;
   align-self: center;
   min-height: 50%;
+}
+
+.WinnerWhoDiv {
+  padding-top: 5%;
 }

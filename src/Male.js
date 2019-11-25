@@ -10,6 +10,8 @@ export default function Male({ result }) {
   return (
     <div className="detailBox">
       <div className="imgBox">
+        <h1>남자</h1>
+
         {/* { <img src={photoUrl} className="detailPhoto" /> }
       </div>
       <div className="textBox">
