@@ -20,7 +20,7 @@
   color: #ffe8ff;
 }
 .winnerMainDiv {
-  margin-top: 30px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -102,7 +102,6 @@ body {
   min-width: 250px;
   min-height: 250px;
   border-style: none;
-
   margin: 0 auto;
 }
 .fileUploadBtn {
@@ -117,35 +116,6 @@ body {
   height: 65%;
   min-width: 250px;
   min-height: 250px;
-}
-
-.nonFileBtn {
-  display: none;
-}
-
-.fileBtn {
-  justify-content: center;
-}
-
-.how-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fb2e57;
-  background: -webkit-linear-gradient(top, #f65342, #fb3282);
-  background: -o-linear-gradient(top, #f65342, #fb3282);
-  background: -moz-linear-gradient(top, #f65342, #fb3282);
-  background: linear-gradient(top, #f65342, #fb3282);
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  opacity: 0;
 }
 
 .how-btn:hover {

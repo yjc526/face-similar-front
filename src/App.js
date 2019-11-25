@@ -11,41 +11,49 @@ function App() {
   const [photoURL, setPhotoURL] = useState(null);
   const [winner, setWinner] = useState(false);
   const [spinner, setSpinner] = useState(null);
-  return (
-    <div className="mainDiv">
-      {result ? (
-        <Result
-          result={result}
-          photoURL={photoURL}
-          photo={photo}
-          winner={winner}
-          setWinner={setWinner}
-        />
-      ) : (
-        <form>
-          <Photo
+  const router = () => {
+    if (winner === true) {
+      return (
+        <div className="mainDiv">
+          <Winner
             result={result}
             setResult={setResult}
-            photo={photo}
+            setWinner={setWinner}
             setPhoto={setPhoto}
-            photoURL={photoURL}
             setPhotoURL={setPhotoURL}
-            setSpinner={setSpinner}
-            spinner={spinner}
           />
-        </form>
-      )}
-      {winner === true && (
-        <Winner
-          result={result}
-          setResult={setResult}
-          setWinner={setWinner}
-          setPhoto={setPhoto}
-          setPhotoURL={setPhotoURL}
-        />
-      )}
-    </div>
-  );
-}
+        </div>
+      );
+    } else {
+      return (
+        <div className="mainDiv">
+          {result ? (
+            <Result
+              result={result}
+              photoURL={photoURL}
+              photo={photo}
+              winner={winner}
+              setWinner={setWinner}
+            />
+          ) : (
+            <form>
+              <Photo
+                result={result}
+                setResult={setResult}
+                photo={photo}
+                setPhoto={setPhoto}
+                photoURL={photoURL}
+                setPhotoURL={setPhotoURL}
+                setSpinner={setSpinner}
+                spinner={spinner}
+              />
+            </form>
+          )}
+        </div>
+      );
+    }
+  };
 
+  return router();
+}
 export default App;

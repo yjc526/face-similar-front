@@ -33,6 +33,7 @@ export default function Photo({
     const filteredData = await checkFile(data);
 
     await setPhoto(filteredData);
+
     console.log("filteredData", filteredData);
 
     if (filteredData) {
@@ -69,7 +70,7 @@ export default function Photo({
   //console.log("formData", formData);
 
   console.log("photo", photo);
-  console.log("photoUR", photoURL);
+  console.log("photoURL", photoURL);
   return (
     <>
       {spinner === true ? (
