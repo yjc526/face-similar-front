@@ -6,6 +6,8 @@ import Spinner from "./Spinner";
 export default function Result({ result, photo, photoURL, winner, setWinner }) {
   console.log("dddddddddddddddddd", result);
   const score = result.score.similar;
+  const volume = result.rank.max;
+  const rank = result.rank.similar;
   return (
     <>
       {!result ? (
@@ -25,7 +27,9 @@ export default function Result({ result, photo, photoURL, winner, setWinner }) {
             </div>
             <div className="resultScoreDiv">
               <h2>점수:{score}</h2>
-              <h3> 우리 커플은 100명 중 1 등</h3>
+              <h3>
+                우리 커플은 {volume} 커플 중 {rank} 등
+              </h3>
             </div>
 
             <div className="btnDiv">
@@ -33,7 +37,7 @@ export default function Result({ result, photo, photoURL, winner, setWinner }) {
 
               <button
                 type="button"
-                className={!winner ? "how-btn" : "noBtn"}
+                className="how-btn"
                 onClick={() => setWinner(true)}
               >
                 날 눌러줘

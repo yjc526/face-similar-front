@@ -9,6 +9,7 @@
 .container p {
   font-size: 35px;
 }
+
 .container span {
   color: #f2a2c0;
   font-size: 50px;
@@ -19,30 +20,19 @@
   color: #ffe8ff;
 }
 .winnerMainDiv {
-  padding-top: 5%;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
 }
 .winnerDiv {
   width: 25%;
   height: 100px;
-  min-width: 120px;
-  min-height: 120px;
+  min-width: 50px;
+  min-height: 50px;
   border-style: solid;
   border-width: 1px;
   border-color: white;
   display: inline-block;
-}
-.winnerPhotoFram {
-  width: 25%;
-  height: 100px;
-  min-width: 120px;
-  min-height: 120px;
-}
-.winnerServeBlankDiv {
-  padding-top: 5%;
-  display: flex;
-  justify-content: center;
 }
 .winnerBlankDiv {
   min-width: 50px;
@@ -66,8 +56,8 @@ h1 {
   margin: 0 auto;
   width: 50%;
   min-width: 450px;
-  min-height: 1000px;
-  height: 100vh;
+  min-height: 1500px;
+  height: 100%;
   background: #73c6d9;
 }
 .mainResultDiv {
@@ -78,6 +68,10 @@ h1 {
   margin-top: 5%;
 }
 body {
+  background: -webkit-linear-gradient(bottom, #040130, #030120);
+  background: -o-linear-gradient(bottom, #040130, #030120);
+  background: -moz-linear-gradient(bottom, #040130, #030120);
+  background: linear-gradient(bottom, #040130, #030120);
   text-align: center;
   font-family: "BMYEONSUNG";
   letter-spacing: 5px;
@@ -87,9 +81,7 @@ body {
 }
 
 /* photo.css */
-
 .custom-file {
-  min-width: 250px;
   width: 45%;
 }
 
@@ -99,7 +91,7 @@ body {
   min-width: 250px;
   min-height: 250px;
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
   border-color: white;
   margin: 0 auto;
   margin-top: 5%;
@@ -126,19 +118,31 @@ body {
   min-height: 250px;
 }
 
+.btnDiv {
+  margin-top: 20px;
+}
+
+.how-btn:hover {
+  background-color: #fb2e57;
+}
+
+.how-btn:hover:before {
+  opacity: 1;
+}
+
 .how-btn {
   padding: 0px 20px;
   background-color: #222222;
   border-radius: 25px;
   color: #fff;
-}
-.how-btn:hover {
-  background-color: #f2a2c0;
-  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
 button {
   display: inline-block;
+
   height: 61px;
   position: relative;
   font-size: 20px;
@@ -148,10 +152,6 @@ button {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(black, 0.2);
-  margin: 10px;
-  transform: translate3d(0, 0, 0);
-}
 
-.btnDiv {
-  margin-top: 10%;
+  transform: translate3d(0, 0, 0);
 }

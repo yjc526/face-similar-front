@@ -12,14 +12,14 @@ export default function Photo({
   setSpinner,
   spinner
 }) {
-  const serverURL = "http://localhost:3000/api/post";
+  const serverURL = "http://70.12.113.63:3000/api/post";
 
   const checkFile = f => {
     if (f) {
       const fileName = f.name;
       const fileSize = f.size;
       if (/\.(jpg|jpeg|png)$/i.test(fileName)) {
-        if (fileSize > 1024 * 1024 * 3) {
+        if (fileSize > 1024 * 1024 * 10) {
           alert("3MB 이하 파일만 등록할 수 있습니다.");
         } else return f;
       } else alert("jpg, png 파일만 업로드 해 주세요");
@@ -56,11 +56,18 @@ export default function Photo({
       return axios
         .post(serverURL, formData)
         .then(res => {
-          const photoData = res.data.result;
-          console.log(res.data.result);
+          if (res.data.status === false) {
+            alert(res.data.result.msg);
+            setPhoto(null);
+            setPhotoURL(null);
+            setSpinner(false);
+          } else {
+            const photoData = res.data.result;
+            console.log(res.data.result);
 
-          setResult(photoData);
-          setSpinner(false);
+            setResult(photoData);
+            setSpinner(false);
+          }
         })
         .catch(err => {
           alert("사진 서버에 저장 실패");
@@ -70,7 +77,7 @@ export default function Photo({
   //console.log("formData", formData);
 
   console.log("photo", photo);
-  console.log("photoURL", photoURL);
+  console.log("photoUR", photoURL);
   return (
     <>
       {spinner === true ? (

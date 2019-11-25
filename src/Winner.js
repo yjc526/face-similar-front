@@ -6,10 +6,13 @@ export default function Winner({
   setWinner,
   setPhoto,
   setPhotoURL,
-  result
+  result,
+  winner
 }) {
   const maleScore = result.score.male;
   const femaleScore = result.score.female;
+  const malePhoto = result.face_url.male;
+  const femalePhoto = result.face_url.female;
 
   return (
     <>
@@ -17,15 +20,22 @@ export default function Winner({
         <Spinner />
       ) : (
         <>
+          <div className="mainResultDiv">
+            <h2>♡싸우지말아요♡</h2>
+          </div>
           <div className="winnerMainDiv">
-            <div className="winnerDiv"></div>
+            <div className="winnerDiv">
+              <img src={malePhoto} className="winnerPhotoFram" />
+            </div>
             <div className="vs">
               <h1>VS</h1>
             </div>
 
-            <div className="winnerDiv"></div>
+            <div className="winnerDiv">
+              <img src={femalePhoto} className="winnerPhotoFram" />
+            </div>
           </div>
-          <div className="winnerMainDiv">
+          <div className="winnerServeBlankDiv">
             <div className="winnerBlankDiv">
               <h3>점수:{maleScore}</h3>
             </div>
@@ -39,6 +49,13 @@ export default function Winner({
             <h1>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h1>
           </div>
           <div>
+            <button
+              type="button"
+              className="how-btn"
+              onClick={() => setWinner(false)}
+            >
+              이전화면
+            </button>
             <button
               type="button"
               className="how-btn"

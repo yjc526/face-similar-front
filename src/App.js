@@ -19,6 +19,7 @@ function App() {
             result={result}
             setResult={setResult}
             setWinner={setWinner}
+            winner={winner}
             setPhoto={setPhoto}
             setPhotoURL={setPhotoURL}
           />
