@@ -28,7 +28,7 @@ export default function Result({ result, photo, photoURL, winner, setWinner }) {
             <div className="resultScoreDiv">
               <h2>점수:{score}</h2>
               <h3>
-                우리 커플은 {volume} 커플 중 {rank} 등
+                우리 커플은 <span>{volume}</span>커플 중 <span>{rank} </span>등
               </h3>
             </div>
 

@@ -11,6 +11,7 @@ function App() {
   const [photoURL, setPhotoURL] = useState(null);
   const [winner, setWinner] = useState(false);
   const [spinner, setSpinner] = useState(null);
+  const [Male, setMale] = useState(null);
   const router = () => {
     if (winner === true) {
       return (
@@ -22,6 +23,8 @@ function App() {
             winner={winner}
             setPhoto={setPhoto}
             setPhotoURL={setPhotoURL}
+            Male={Male}
+            setMale={setMale}
           />
         </div>
       );
