@@ -2,6 +2,8 @@ import React from "react";
 import Spinner from "./Spinner";
 import Male from "./Male";
 import Female from "./Female";
+import CountUp from "react-countup";
+import Confetti from "react-confetti";
 
 export default function Winner({
   setResult,
@@ -20,6 +22,7 @@ export default function Winner({
     if (!detail) {
       return (
         <>
+          <Confetti />
           {!result ? (
             <Spinner />
           ) : (
@@ -53,16 +56,22 @@ export default function Winner({
               </div>
               <div className="winnerServeBlankDiv">
                 <div className="winnerBlankDiv">
-                  <h3>점수:{maleScore}</h3>
+                  <h3>
+                    점수:
+                    <CountUp start={0} end={maleScore} decimals={2} />
+                  </h3>
                 </div>
                 <div className="blank"> </div>
 
                 <div className="winnerBlankDiv">
-                  <h3>점수:{femaleScore}</h3>
+                  <h3>
+                    점수:
+                    <CountUp start={0} end={femaleScore} decimals={2} />
+                  </h3>
                 </div>
               </div>
               <div>
-                <h1>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h1>
+                <h2>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h2>
               </div>
               <div>
                 <button
@@ -142,7 +151,7 @@ export default function Winner({
               </div>
 
               <div>
-                <h1>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h1>
+                <h2>Winner is {maleScore > femaleScore ? "MAN" : "WOMAN"}</h2>
               </div>
               <div>
                 <button

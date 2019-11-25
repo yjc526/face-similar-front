@@ -1,5 +1,5 @@
 import React from "react";
-
+import CountUp from "react-countup";
 import "@fortawesome/fontawesome-free/css/all.min.css"; //yarn add @fortawesome/fontawesome-free
 import Spinner from "./Spinner";
 
@@ -26,9 +26,16 @@ export default function Result({ result, photo, photoURL, setWinner }) {
               />
             </div>
             <div className="resultScoreDiv">
-              <h2>점수:{score}</h2>
+              <h2>
+                점수:
+                <CountUp start={0} end={score} />
+              </h2>
               <h3>
-                우리 커플은 <span>{volume}</span>커플 중 <span>{rank}</span>등
+                우리 커플은 <span>{volume}</span>커플 중
+                <span>
+                  <CountUp start={0} end={rank} />
+                </span>
+                등
               </h3>
             </div>
 

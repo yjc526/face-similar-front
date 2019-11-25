@@ -1,19 +1,24 @@
 import React from "react";
 
-export default function Female({ result }) {
-  /*    const photo 
-    const age
-    const volume
-    const rank */
+export default function Male({ result }) {
+  const photoUrl = result.info.male.celebrity.url;
+  const name = result.info.male.celebrity.name;
+  const age = result.info.male.age;
+  const volume = result.rank.max;
+  const rank = result.rank.male;
+
   return (
-    <div className="DetailBox">
-      <div className="ImgBox">
-        <img src />
+    <div className="detailBox">
+      <div className="imgBox">
+        <img src={photoUrl} className="detailPhoto" />
       </div>
-      <div classNam="TextBox">
-        <p>닮은 연예인:</p>
-        <p>나이:</p>
-        <p>남자 10명중 1등</p>
+      <div className="textBox">
+        <p>닮은 연예인:{name}</p>
+        <p>나이:{age}</p>
+        <p>
+          남자 {volume}명중 {rank}등
+        </p>
+        <p>감정:</p>
       </div>
     </div>
   );
