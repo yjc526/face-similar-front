@@ -1,16 +1,16 @@
 import React from "react";
 
 export default function Male({ result }) {
-  const photoUrl = result.info.male.celebrity.url;
-  const name = result.info.male.celebrity.name;
-  const age = result.info.male.age;
-  const volume = result.rank.max;
-  const rank = result.rank.male;
+  //const photoUrl = result.info.male.celebrity.url;
+  // const name = result.info.male.celebrity.name;
+  // const age = result.info.male.age;
+  // const volume = result.rank.max;
+  // const rank = result.rank.male;
 
   return (
     <div className="detailBox">
       <div className="imgBox">
-        <img src={photoUrl} className="detailPhoto" />
+        {/* { <img src={photoUrl} className="detailPhoto" /> }
       </div>
       <div className="textBox">
         <p>닮은 연예인:{name}</p>
@@ -18,7 +18,7 @@ export default function Male({ result }) {
         <p>
           남자 {volume}명중 {rank}등
         </p>
-        <p>감정:</p>
+        <p>감정:</p> */}
       </div>
     </div>
   );
