@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import Photo from "./Photo";
+import Result from "./Result";
+import Winner from "./Winner";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [result, setResult] = useState(null);
+  const [photo, setPhoto] = useState(null);
+  const [photoURL, setPhotoURL] = useState(null);
+  const [winner, setWinner] = useState(false);
+  const [spinner, setSpinner] = useState(null);
+  const [detail, setDetail] = useState(null);
+  const router = () => {
+    if (winner === true) {
+      return (
+        <div className="mainDiv">
+          <Winner
+            result={result}
+            setResult={setResult}
+            setWinner={setWinner}
+            winner={winner}
+            setPhoto={setPhoto}
+            setPhotoURL={setPhotoURL}
+            detail={detail}
+            setDetail={setDetail}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className="mainDiv">
+          {result ? (
+            <Result
+              result={result}
+              photoURL={photoURL}
+              photo={photo}
+              winner={winner}
+              setWinner={setWinner}
+            />
+          ) : (
+            <form>
+              <Photo
+                result={result}
+                setResult={setResult}
+                photo={photo}
+                setPhoto={setPhoto}
+                photoURL={photoURL}
+                setPhotoURL={setPhotoURL}
+                setSpinner={setSpinner}
+                spinner={spinner}
+              />
+            </form>
+          )}
+        </div>
+      );
+    }
+  };
 
+  return router();
+}
 export default App;
