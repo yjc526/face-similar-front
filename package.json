@@ -21,7 +21,6 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "aws s3 sync ./build s3://face-similar --profile=YJC"
-    //"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,10 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  /*
-  "homepage": "https://HyoeunKong.github.io/loveProject",
-  "devDependencies": {
-    "gh-pages": "^2.1.1"
-  }*/
+  }
 }
