@@ -18,41 +18,6 @@
   padding-top: 20%;
   color: white;
 }
-.winnerMainDiv {
-  padding-top: 5%;
-  display: flex;
-  justify-content: center;
-}
-.winnerDiv {
-  width: 25%;
-  height: 100px;
-  min-width: 120px;
-  min-height: 120px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  display: inline-block;
-  border-radius: 50%;
-}
-.winnerPhotoFram {
-  width: 25%;
-  height: 100px;
-  min-width: 120px;
-  min-height: 120px;
-  border-radius: 50%;
-}
-.winnerServeBlankDiv {
-  padding-top: 5%;
-  display: flex;
-  justify-content: center;
-}
-.winnerBlankDiv {
-  min-width: 50px;
-  min-height: 50px;
-
-  border-style: none;
-  display: inline-block;
-}
 .vs {
   align-self: center;
   margin: 4%;
@@ -66,11 +31,8 @@ h1 {
 }
 .mainDiv {
   margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
-  min-width: 350px;
-  min-height: 1000px;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #73c6d9;
 }
 .mainResultDiv {
@@ -179,13 +141,12 @@ button {
 }
 
 .detailBox {
-  width: 100%;
-  height: 65%;
-  min-width: 250px;
+  width: 90%;
+  height: 25%;
+  min-width: 300px;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 25%;
   min-height: 200px;
-
   margin: 0 auto;
   margin-top: 5%;
   display: grid;
@@ -217,6 +178,40 @@ button {
   min-height: 50%;
 }
 
-.WinnerWhoDiv {
+/* ////////////////////////////winner */
+
+.winnerMainDiv {
   padding-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.winnerDiv {
+  width: 25%;
+  height: 100px;
+  min-width: 120px;
+  min-height: 120px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  display: inline-block;
+  border-radius: 50%;
+}
+.winnerPhotoFram {
+  width: 25%;
+  height: 100px;
+  min-width: 120px;
+  min-height: 120px;
+  border-radius: 50%;
+}
+.winnerServeBlankDiv {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.winnerBlankDiv {
+  min-width: 50px;
+  min-height: 50px;
+
+  border-style: none;
+  display: inline-block;
 }

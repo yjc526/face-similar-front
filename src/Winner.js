@@ -1,5 +1,5 @@
 import React from "react";
-import Spinner from "./Spinner";
+
 import Male from "./Male";
 import Female from "./Female";
 import CountUp from "react-countup";
@@ -17,8 +17,8 @@ export default function Winner({
 }) {
   const maleScore = result.score.male;
   const femaleScore = result.score.female;
-  //const malePhoto = result.face_url.male;
-  //const femalePhoto = result.face_url.female;
+  const malePhoto = result.face_url.male;
+  const femalePhoto = result.face_url.female;
   const main = () => {
     return (
       <>
@@ -28,7 +28,7 @@ export default function Winner({
         <div className="winnerMainDiv">
           <div className="winnerDiv">
             <img
-              //src={malePhoto}
+              src={malePhoto}
               className="winnerPhotoFram"
               onClick={() => {
                 setDetail("male");
@@ -41,7 +41,7 @@ export default function Winner({
 
           <div className="winnerDiv">
             <img
-              // src={femalePhoto}
+              src={femalePhoto}
               className="winnerPhotoFram"
               onClick={() => {
                 setDetail("female");

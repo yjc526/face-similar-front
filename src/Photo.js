@@ -12,7 +12,7 @@ export default function Photo({
   setSpinner,
   spinner
 }) {
-  const serverURL = "http://localhost:3000/api/post";
+  const serverURL = "http://70.12.113.63:3000/api/post";
 
   const checkFile = f => {
     if (f) {
