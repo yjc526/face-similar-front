@@ -12,14 +12,14 @@ export default function Photo({
   setSpinner,
   spinner
 }) {
-  const serverURL = "http://70.12.113.63:3000/api/post";
+  const serverURL = "https://face-love.herokuapp.com/api/post";
 
   const checkFile = f => {
     if (f) {
       const fileName = f.name;
       const fileSize = f.size;
       if (/\.(jpg|jpeg|png)$/i.test(fileName)) {
-        if (fileSize > 1024 * 1024 * 10) {
+        if (fileSize > 1024 * 1024 * 3) {
           alert("3MB 이하 파일만 등록할 수 있습니다.");
         } else return f;
       } else alert("jpg, png 파일만 업로드 해 주세요");
@@ -95,8 +95,8 @@ export default function Photo({
           </div>
           <div className="photoDiv">
             <div className={photo ? "nonDescriptDiv" : "descriptDiv"}>
-              <p>1.사진은 꼭 커플 사진으로 올려죠요</p>
-              <p>2.크기는 10MB 이하만 가능합니다</p>
+              <p>1. 사진은 꼭 커플 사진으로 올려죠요</p>
+              <p>2. 사진크기는 3MB 이하만 가능합니다</p>
               <p>3. 얼굴이 잘리지 않고 잘 나온 사진으로 올려죠요</p>
             </div>
             <img
