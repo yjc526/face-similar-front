@@ -125,6 +125,7 @@ export default function Winner({
         <>
           <Confetti />
           {main()}
+          <p className="seeThePhoto">사진을 클릭해 보세용</p>
           {footer()}
         </>
       );

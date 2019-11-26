@@ -13,6 +13,7 @@ export default function Photo({
   spinner
 }) {
   const serverURL = "https://face-love.herokuapp.com/api/post";
+  // "https://localhost:3000/api/post";
 
   const checkFile = f => {
     if (f) {
@@ -85,18 +86,20 @@ export default function Photo({
       ) : (
         <>
           <div className="container">
-            <p>
-              <img src="케릭터3.png" width="100px" height="70px" />
-              <span>사</span>랑에빠진
-              <span>얼</span>굴
-            </p>
+            <div className="containerTitle">
+              <p>
+                <img src="케릭터3.png" width="20%" height="30%x" />
+                <span>사</span>랑에빠진
+                <span>얼</span>굴
+              </p>
+            </div>
 
-            <h4>커플 사진을 업로드 해 주세요</h4>
+            <h5>커플 사진을 업로드 해 주세요</h5>
           </div>
           <div className="photoDiv">
             <div className={photo ? "nonDescriptDiv" : "descriptDiv"}>
-              <p>1. 사진은 꼭 커플 사진으로 올려죠요</p>
-              <p>2. 사진크기는 3MB 이하만 가능합니다</p>
+              <p>1. 꼭 커플 사진으로 올려죠요</p>
+              <p>2. 크기는 3MB 이하만 가능해요</p>
               <p>3. 얼굴이 잘리지 않고 잘 나온 사진으로 올려죠요</p>
             </div>
             <img
